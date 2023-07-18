@@ -1,0 +1,268 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+body {
+    font-family: 'GmarketSansMedium';
+    color: #fff;
+    background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.wrapper {
+    margin-top: 50px;
+}
+
+/* 제목 이미지 */
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.title_img {
+    position: absolute;
+}
+
+.title_img img {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* 설명 */
+.intro {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.intro .saying {
+    text-align: center;
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 36px;
+    color: #ffffcc;
+}
+
+.intro .explain {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.intro .quotes {
+    padding-top: 20px;
+}
+
+.intro .explain p {
+    position: absolute;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-top: 30px;
+}
+
+.intro .explain span {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* 사용자 입력 */
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.inputs div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.inputs input {
+    padding: 15px 20px;
+    margin: 0 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 200px;
+}
+
+.inputs input::placeholder {
+    color: #babc;
+    font-family: 'GmarketSansMedium';
+}
+
+button {
+    font-family: 'GmarketSansMedium';
+    font-weight: 600;
+    font-size: 20px;
+    color: #7f7f7f;
+    background-color: #fdee00;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.start {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.start .btn_wrap {
+    float: left;
+}
+
+.start .click_img {
+    position: relative;
+    top: -10px;
+    float: right;
+}
+
+/* 로딩 */
+.loading {
+    display: none;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.loading .img_wrap {
+    width: 100px;
+    height: 100px;
+}
+
+.loading .img_wrap img {
+    width: 100%;
+    animation: rotate 1.5s infinite linear;
+}
+
+/* 결과 */
+.result {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+    margin-bottom: 50px;
+}
+
+.result .result_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result .result_wrap div {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.result span {
+    padding: 0 20px;
+    font-size: 70px;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.btns .share button {
+    background-color: #fff;
+    margin-left: 20px;
+}
+
+/* 모달 */
+#modal {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+
+#modal .modal_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 600px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+#modal .cheer {
+    font-family: 'OTEnjoystoriesBA';
+    color: #f7bede;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#modal .cheer h1 {
+    font-size: 50px;
+    line-height: 1.3;
+}
+
+#modal .cheer h3 {
+    font-size: 30px;
+}
+
+#modal img {
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+#modal .close_btn {
+    box-shadow: 0px 5px 20px 1px rgba(0, 0, 0, 15%);
+    margin-bottom: 20px;
+}
+
+#copyright {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+#copyright p {
+    font-size: 10px;
+    line-height: 1.5;
+    padding: 20px 0;
+    text-align: center;
+}
